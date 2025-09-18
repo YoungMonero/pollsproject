@@ -1,0 +1,133 @@
+* {
+    box-sizing: 0;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .right-side, 
+    .side-img {
+        flex: none;
+        width: 100%;
+        height: 70vh;
+    }
+
+    .side-img {
+        height: 100%;
+        width: 100%;
+        margin-bottom: 3rem;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .right-side {
+        /* padding: 1.5rem; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            /* height: 40%;
+            width: 100%; */
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .title {
+        font-size: 2.2rem;
+        color: #4361EE;
+        margin-bottom: 2rem;
+    }
+
+    .text {
+        font-size: 1rem;
+        font-weight: 600;
+        /* margin-bottom: 1rem; */
+    }
+
+    .join {
+    padding: 0.75rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #3A0CA3;
+    color: #F8F9FA;
+    border: none;
+    border-radius: 0.3rem;
+    transition: 0.5 ease-in-out;
+    margin-top: 2rem;
+    font-size: 18px;
+}
+
+.join:hover {
+    background-color: #4361EE;
+}
+}
+
+
+@media (min-width: 768px) {
+body {
+    /* overflow-y: hidden; */
+      font-family: "Montserrat", sans-serif;
+}
+
+.main-container {
+    display: flex;
+    height: 100vh;
+}
+
+.side-img {
+    background-size: cover;
+    background-position: center;
+
+    img {
+        height: 100%;
+        width: 105%;
+    }
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.title {
+    font-size: 3.5rem;
+    color: #4361EE;
+}
+
+.text {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.join {
+    padding: 0.75rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #3A0CA3;
+    color: #F8F9FA;
+    border: none;
+    border-radius: 0.3rem;
+    transition: 0.5 ease-in-out;
+    margin-top: 4rem;
+}
+
+.join:hover {
+    background-color: #4361EE;
+}
+}

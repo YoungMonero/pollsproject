@@ -11,6 +11,8 @@ import errorHandler from './middleware/errorHandler.js';
 
 dotenv.config();
 
+console.log("FRONTEND_URL from env:", process.env.FRONTEND_URL)
+
 const app = express();
 
 app.use(logger('dev'));
