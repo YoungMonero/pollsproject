@@ -1,0 +1,66 @@
+.body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+  background: linear-gradient(138deg, #4361EE,
+  #3A0CA3);
+  font-size: 1.6rem;
+  
+    
+}
+
+.participant {
+    color: white;
+}
+
+.participant p {
+  font-size: 1.3rem;
+  padding: 30px 0px;
+  color: white;
+}
+
+.handleinput {
+  padding: 10px;
+  display: flex;
+  background-color: white;
+  border-radius: 40px;
+}
+
+.handleinput input{
+   padding: 8px;
+   border: none;
+   background-color: transparent;
+   font-size: 1.4rem;
+   
+}
+
+.handleinput span {
+    color: #3A0CA3;
+    font-weight: 800;
+}
+
+.handleinput form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.handleinput button {
+    border: none;
+    color: white;
+    background-color: #3A0CA3;
+    border-radius: 50%;
+    padding: 13px 18px;
+
+}
+
+.handleinput button:hover {
+    background-color: #320b8b;
+}
+
+.handleinput label {
+    margin: 8px;
+    display: flex;
+    gap: 1rem;
+}
