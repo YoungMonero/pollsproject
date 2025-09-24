@@ -1,5 +1,5 @@
 // services/userService.js
-import pool from '../db/index.js';
+import {pool} from '../db/index.js';
 
 export async function findByEmailOrUsername(identifier) {
   const q = await pool.query(

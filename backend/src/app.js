@@ -7,13 +7,16 @@ import dotenv from 'dotenv';
 import indexRouter from './routes/index.js';
 import authRouter from './routes/auth.js';
 import errorHandler from './middleware/errorHandler.js';
-
+import { createTablesAndIndexes } from './db/init_db.js';
+import { testConnection } from './db/index.js';
 
 dotenv.config();
 
 console.log("FRONTEND_URL from env:", process.env.FRONTEND_URL)
 
 const app = express();
+testConnection();
+createTablesAndIndexes ();
 
 app.use(logger('dev'));
 app.use(express.json());
