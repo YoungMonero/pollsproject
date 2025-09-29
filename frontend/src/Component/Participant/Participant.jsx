@@ -20,10 +20,9 @@ const Participant = () => {
       <div className={styles.handleinput}>
           <form onSubmit={handleSubmit} >
         <label>
-          <span>#</span>
           <input
             type="text"
-            placeholder="Enter slido code"
+            placeholder="Enter session code"
             value={code}
             onChange={(e) => setCode(e.target.value)}
           />

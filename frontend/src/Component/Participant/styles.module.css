@@ -3,64 +3,177 @@
   justify-content: center;
   min-height: 100vh;
   align-items: center;
-  background: linear-gradient(138deg, #4361EE,
-  #3A0CA3);
-  font-size: 1.6rem;
-  
-    
+  background: linear-gradient(138deg, #4361EE, #3A0CA3);
+  font-size: 1rem;
+  padding: 20px;
+  border-radius: 14px;
+  box-sizing: border-box;
 }
 
 .participant {
-    color: white;
+  color: white;
+  text-align: center;
+  width: 100%;
+  max-width: 450px;
 }
 
 .participant p {
-  font-size: 1.3rem;
-  padding: 30px 0px;
+  font-size: 1rem;
+  padding: 20px 0;
   color: white;
+  margin: 0;
 }
 
 .handleinput {
-  padding: 10px;
+  padding: 8px;
   display: flex;
   background-color: white;
   border-radius: 40px;
+  width: 100%;
 }
 
-.handleinput input{
-   padding: 8px;
-   border: none;
-   background-color: transparent;
-   font-size: 1.4rem;
-   
+.handleinput input {
+  padding: 10px 8px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  width: 100%;
+  min-width: 0; /* Prevents input from overflowing */
 }
 
 .handleinput span {
-    color: #3A0CA3;
-    font-weight: 800;
+  color: #3A0CA3;
+  font-weight: 800;
 }
 
 .handleinput form {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
 }
 
 .handleinput button {
-    border: none;
-    color: white;
-    background-color: #3A0CA3;
-    border-radius: 50%;
-    padding: 13px 18px;
-
+  border: none;
+  color: white;
+  background-color: #3A0CA3;
+  border-radius: 50%;
+  padding: 10px 12px;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  flex-shrink: 0; /* Prevents button from shrinking */
+  min-width: 20px; /* Better touch targets for mobile */
+  min-height: 44px;
 }
 
 .handleinput button:hover {
-    background-color: #320b8b;
+  background-color: #26105a;
+  transform: scale(0.9);
 }
 
 .handleinput label {
-    margin: 8px;
-    display: flex;
-    gap: 1rem;
+  margin: 8px;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+  .body {
+    font-size: 0.9rem;
+    padding: 15px;
+    min-height: 30vh;
+  }
+  
+  .participant p {
+    font-size: 0.9rem;
+    padding: 15px 0;
+  }
+  
+  .handleinput {
+    padding: 6px;
+  }
+  
+  .handleinput input {
+    font-size: 0.9rem;
+    padding: 8px 6px;
+  }
+  
+  .handleinput button {
+    padding: 8px 10px;
+    min-width: 40px;
+    min-height: 40px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .body {
+    font-size: 0.8rem;
+    padding: 10px;
+    align-items: flex-start;
+    padding-top: 40px;
+    min-height: 30vh;
+  }
+  
+  .participant {
+    max-width: 80%;
+    
+  }
+  
+  .participant p {
+    font-size: 0.85rem;
+    padding: 12px 0;
+  }
+  
+  .handleinput {
+    padding: 5px;
+    border-radius: 30px;
+  }
+  
+  .handleinput input {
+    font-size: 0.85rem;
+    padding: 6px 5px;
+  }
+  
+  .handleinput button {
+    padding: 6px 8px;
+    min-width: 36px;
+    min-height: 36px;
+  }
+  
+  .handleinput label {
+    margin: 4px;
+    gap: 0.3rem;
+  }
+  
+  .handleinput form {
+    gap: 5px;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 320px) {
+  .body {
+    font-size: 0.75rem;
+    min-height: 30vh;
+  }
+  
+  .participant p {
+    font-size: 0.8rem;
+  }
+  
+  .handleinput input {
+    font-size: 0.8rem;
+  }
+  
+  .handleinput form {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

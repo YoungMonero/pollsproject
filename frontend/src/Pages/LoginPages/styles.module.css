@@ -1,4 +1,22 @@
 .login {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 768px){
+    .login  {
+    display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .login  {
+    display: block;
+    }
+}
+
+@media (max-width: 320px) {
+    .login  {
+    display: block;
+    }
 }
