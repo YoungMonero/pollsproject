@@ -72,7 +72,7 @@
   color: var(--foreground);
 }
 
-}
+
 .handleinput button:hover {
   background-color: var(--primary-hover);
 }
