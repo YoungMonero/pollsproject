@@ -38,7 +38,7 @@ export default function Sidebar({ user, onLogout, activeSection }) {
             <div className={styles.logoIcon}>P</div>
           </div>
           <div className={styles.brandInfo}>
-            <h2 className={styles.brandName}>Pollify</h2>
+            <h2 className={styles.brandName}>Pollup</h2>
             <span className={styles.brandSubtext}>{user.username}'s organization</span>
             <span className={styles.ownerBadge}>Owner</span>
           </div>
@@ -48,7 +48,7 @@ export default function Sidebar({ user, onLogout, activeSection }) {
         <nav className={styles.navigation}>
           <ul className={styles.navList}>
             {navigationItems.map((item) => (
-              <motion.li 
+              <motion.div
                 key={item.id}
                 whileHover={{ x: 4 }}
                 transition={{ duration: 0.2 }}
@@ -59,7 +59,7 @@ export default function Sidebar({ user, onLogout, activeSection }) {
                   <item.icon className={styles.navIcon} />
                   <span className={styles.navLabel}>{item.label}</span>
                 </button>
-              </motion.li>
+              </motion.div>
             ))}
           </ul>
         </nav>
@@ -69,7 +69,7 @@ export default function Sidebar({ user, onLogout, activeSection }) {
           <h3 className={styles.sectionTitle}>Integrations</h3>
           <ul className={styles.integrationList}>
             {integrationItems.map((item) => (
-              <motion.li 
+              <motion.div 
                 key={item.id}
                 whileHover={{ x: 4 }}
                 transition={{ duration: 0.2 }}
@@ -78,7 +78,7 @@ export default function Sidebar({ user, onLogout, activeSection }) {
                   <item.icon className={styles.integrationIcon} />
                   <span className={styles.integrationLabel}>{item.label}</span>
                 </button>
-              </motion.li>
+              </motion.div>
             ))}
           </ul>
         </div>
