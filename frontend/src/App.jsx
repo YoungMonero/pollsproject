@@ -5,6 +5,9 @@ import LoginPage from "./Pages/LoginPages/LoginPage";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import ProtectedRoute from "./Component/ProtectedRoute/ProtectedRoute";
 import { useAuth } from "./Context/AuthContext";
+import PollPage from './Pages/PollPage/pollPage';
+import ParticipantJoin from './Pages/ParticipantJoin/ParticipantJoin';
+import ParticipantDashboard from './Pages/ParticipantDashboard/ParticipantDashboard';
 
 export default function App() {
   const { user } = useAuth();
@@ -28,6 +31,13 @@ export default function App() {
             </ProtectedRoute>
           }
         />
+        <Route path="/sessions/:sessionId/polls" element={
+            <ProtectedRoute><PollPage /></ProtectedRoute>
+          } />
+
+          {/* Participant Routes */}
+          <Route path="/join" element={<ParticipantJoin />} />
+          <Route path="/participant-dashboard" element={<ParticipantDashboard />} />
 
         {/* Catch-All (Optional) */}
         <Route path="*" element={<div>404 - Page Not Found</div>} />
