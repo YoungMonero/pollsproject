@@ -1,6 +1,7 @@
 import { Search, Plus } from "lucide-react";
 import { motion } from "framer-motion";
 import styles from "./DashboardHeader.module.css";
+import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 // import DarkModeToggle from "../../components/DarkModeToggle/DarkModeToggle";
 
 export default function DashboardHeader({ 
@@ -39,6 +40,9 @@ export default function DashboardHeader({
             <Plus className={styles.createIcon} />
             Create Session
           </motion.button>
+        </div>
+        <div className={styles.darkmode}>
+          <DarkModeToggle/>
         </div>
       </div>
     </motion.header>
