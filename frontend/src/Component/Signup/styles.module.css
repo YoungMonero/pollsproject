@@ -3,119 +3,158 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #f4f6f9;
-  padding: 20px
+  background-color: var(--background);
+  padding: 20px;
 }
 
 .card {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
+  padding: 2rem;
   width: 100%;
-  max-width: 480px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
 }
 
 .title {
-  font-size: 1.6rem;
-  margin-bottom: 8px;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
   text-align: center;
 }
 
 .subtitle {
-  font-size: 0.9rem;
-  margin-bottom: 20px;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  color: var(--muted-foreground);
   text-align: center;
-  color: #555;
 }
 
 .form label {
-  font-weight: 600;
-  margin-top: 10px;
   display: block;
+  font-size: 0.875rem;
+  margin: 1.5rem 0 0.3rem;
+  color: var(--foreground);
+  font-weight: 500;
 }
 
 .form input {
   width: 100%;
-  padding: 10px;
-  margin-top: 6px;
-  margin-bottom: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  padding: 16px 12px;
+  margin-bottom: 10px;
+  border: 1px solid var(--input);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  background-color: var(--surface);
+  color: var(--foreground);
   outline: none;
   transition: border 0.2s ease;
 }
 
 .form input:focus {
-  border-color: #007bff;
+  border-color: var(--primary);
 }
 
 .primaryBtn {
   width: 100%;
-  padding: 12px;
-  background: #007bff;
-  color: white;
+  padding: 15px 18px;
+  margin: 30px 0;
+  background-color: var(--primary);
+  border-radius: var(--radius);
+  color: var(--primary-foreground);
   font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 8px;
+  font-weight: 500;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease-in-out;
+  border: none;
 }
 
 .primaryBtn:hover {
-  background: #0056b3;
+  background-color: var(--primary-hover);
 }
 
 .divider {
-  margin: 20px 0;
   text-align: center;
-  font-size: 0.85rem;
-  color: #aaa;
+  margin: 40px 0;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  height: 1px;
+  width: 30%;
+  background: var(--border);
+  position: absolute;
+  top: 50%;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
 }
 
 .socialButtons {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
   gap: 10px;
-  justify-content: center;
 }
 
 .googleBtn,
 .appleBtn {
   flex: 1;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background: #fff;
+  padding: 13px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--card);
+  color: var(--foreground);
   cursor: pointer;
+  font-size: 0.9rem;
   transition: all 0.2s ease;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.socialButtons button h4 {
+  margin-top: 3px;
 }
 
 .googleBtn:hover {
-  background: #f4f4f4;
-  border-color: #4285f4;
+  background-color: var(--accent);
+  border-color: var(--primary);
 }
 
 .appleBtn:hover {
-  background: #f4f4f4;
-  border-color: #000;
+  background-color: var(--accent);
+  border-color: var(--foreground);
 }
 
 .switchText {
   margin-top: 15px;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  color: var(--muted-foreground);
+}
+
+.switchText a {
+  color: var(--primary);
+  font-weight: 500;
+  text-decoration: none;
 }
 
 .error {
-  color: #e74c3c;
+  color: var(--danger);
   font-size: 0.8rem;
   margin-top: -8px;
   margin-bottom: 10px;
 }
 
 .success {
-  color: #27ae60;
+  color: var(--success);
   font-size: 0.9rem;
   margin-top: 12px;
   font-weight: 600;

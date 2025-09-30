@@ -1,15 +1,15 @@
 .loginContainer {
   display: flex;
   height: 100vh;
-  
+  background-color: var(--background);
 }
 
 .logo {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 30px;
+  color: var(--primary);
 }
-
 
 .loginRight {
   flex: 1;
@@ -19,82 +19,88 @@
 }
 
 .loginForm {
-  width: 80%;
-  max-width: 490px;
+  width: 100%;
+  max-width: 600px;
+  /* background-color: hsl(var(--card));
+  box-shadow: var(--shadow-card);
+  border-radius: var(--radius-lg); */
+  padding: 2rem;
 }
 
 .loginForm h2 {
-  font-size: 34px;
+  font-size: 3rem;
   margin-bottom: 30px;
-  color: #2a2cc5;
+  color: var(--primary);
+  text-align: center;
 }
 
 .loginForm p {
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-bottom: 20px;
-  color: #555;
+  color: var(--muted-foreground);
+  text-align: center;
 }
 
 .loginForm label {
   display: block;
-  font-size: 14px;
-  margin: 40px 0 5px;
+  font-size: 0.875rem;
+  margin: 1.5rem 0 0.3rem;
+  color: var(--foreground);
 }
 
 .loginForm input {
-  width: 96%;
-  padding: 18px 10px;
+  width: 100%;
+  padding: 16px 12px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
+  border: 1px solid var(--input);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  background-color: var(--surface);
+  color: var(--foreground);
 }
 
 .loginOptions {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 13px;
+  font-size: 0.8rem;
   margin-bottom: 20px;
-  
 }
 
 .loginOptions label {
   display: flex;
-  gap: 1rem;
-}
-
-.loginOptions label input {
-  width: 20px;
-  margin-top: -10px;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--foreground);
 }
 
 .loginOptions a {
-  color: #3a3df0;
+  color: var(--primary);
   text-decoration: none;
 }
 
 .loginBtn {
   width: 100%;
   padding: 12px 18px;
-  background: #3a3df0;
-  border: none;
-  border-radius: 6px;
-  color: white;
-  font-size: 16px;
+  background: var(--primary);
+  border-radius: var(--radius);
+  color: var(--primary-foreground);
+  font-size: 1rem;
   cursor: pointer;
+  transition: background 0.2s ease-in-out;
 }
 
 .loginBtn:hover {
-  background: #2a2cc5;
+  background: var(--primary-hover);
 }
 
 .divider {
   text-align: center;
   margin: 20px 0;
-  font-size: 12px;
-  color: #888;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
   position: relative;
+  margin: 60px 0 ;
 }
 
 .divider::before,
@@ -102,7 +108,7 @@
   content: "";
   height: 1px;
   width: 30%;
-  background: #ccc;
+  background: var(--border);
   position: absolute;
   top: 50%;
 }
@@ -119,26 +125,41 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-  
+  margin: 20px 0;
+  gap: 1rem;
 }
 
 .socialButtons button {
   flex: 1;
-  margin: 0 5px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background: white;
+  padding: 13px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--foreground);
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.9rem;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+ 
+}
+
+.socialButtons button h4 {
+  margin-top: 3px;
+}
+
+.socialButtons button:hover {
+  background: var(--accent);
 }
 
 .switchText {
-  font-size: 13px;
+  font-size: 0.8rem;
   text-align: center;
+  color: var(--muted-foreground);
 }
 
 .switchText a {
-  color: #3a3df0;
+  color: var(--primary);
   text-decoration: none;
+  font-weight: 500;
 }

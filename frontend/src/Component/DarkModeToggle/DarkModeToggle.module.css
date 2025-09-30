@@ -1,0 +1,69 @@
+.toggle {
+  position: relative;
+  background: transparent;
+  border: 2px solid var(--border);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.toggle:hover {
+  border-color: var(--primary);
+  background: var(--accent);
+  transform: scale(1.05);
+}
+
+.toggle:active {
+  transform: scale(0.95);
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toggle:hover .iconWrapper {
+  transform: rotate(180deg);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: var(--foreground);
+  transition: color 0.3s ease;
+}
+
+.toggle:hover .icon {
+  color: var(--primary);
+}
+
+/* Focus styles for accessibility */
+.toggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--ring) / 0.3;
+}
+
+/* Animation for theme switching */
+@keyframes theme-switch {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.toggle.switching .iconWrapper {
+  animation: theme-switch 0.6s ease-in-out;
+}

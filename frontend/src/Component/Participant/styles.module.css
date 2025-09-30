@@ -3,18 +3,21 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+
   /* Use background + gradient accent */
   background: linear-gradient(
     138deg,
     var(--primary) 0%,
     var(--primary-hover) 100%
   );
+
   font-size: 1.6rem;
 }
 .participant {
   color: var(--card-foreground);
   /* text-align: center; */
 }
+
 .participant h2 {
   font-size: 3rem;
 }
@@ -30,6 +33,7 @@
   border-radius: 40px;
   box-shadow: var(--shadow-card);
 }
+
 .handleinput input {
   padding: 8px;
   border: none;
@@ -55,6 +59,19 @@
   padding: 13px 18px;
   cursor: pointer;
   transition: background 0.2s ease-in-out;
+}
+
+.handleinput button:hover {
+  background-color: var(--primary-hover);
+}
+
+.handleinput label {
+  margin: 8px;
+  display: flex;
+  gap: 1rem;
+  color: var(--foreground);
+}
+
 }
 .handleinput button:hover {
   background-color: var(--primary-hover);
@@ -161,3 +178,4 @@
     justify-content: center;
   }
 }
+
