@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { BarChart3, Users, Shield, TrendingUp, Zap, Globe } from "lucide-react";
 import styles from "./styles.module.css";
-import heroImage from "../../assets/images/hero-polling.jpg";
+import heroImage from "../../assets/images/hero-polling.jpeg";
 import realtimeIcon from "../../assets/images/feature-realtime.png";
 import engagementIcon from "../../assets/images/feature-engagement.png";
 import secureIcon from "../../assets/images/feature-secure.png";
@@ -130,12 +130,6 @@ const LandingPage = () => {
                 onClick={() => navigate("/signup")}
               >
                 Register Now
-              </button>
-              <button 
-                className={styles.heroCtaSecondary}
-                onClick={() => navigate("/demo")}
-              >
-                Watch Demo
               </button>
             </motion.div>
 

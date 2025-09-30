@@ -1,4 +1,6 @@
+
 import  pool  from "./index.js";
+
 
 export const createTablesAndIndexes = async () => {
   const client = await pool.connect();

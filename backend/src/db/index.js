@@ -16,22 +16,22 @@ pool.on('error', (err) => {
 export default pool;
 
 
+import dotenv from "dotenv";
+import { Pool } from "pg";
 
 
-// src/db/index.js
-// import dotenv from "dotenv";
-// import { Pool } from "pg";
 
-// dotenv.config();
+dotenv.config();
 
-// export const pool = new Pool({
-//   user: process.env.DB_USER ,
-//   host: process.env.DB_HOST ,
-//   database: process.env.DB_NAME ,
-//   password: process.env.DB_PASSWORD ,
-//   port: parseInt(process.env.DB_PORT)
 
-// });
+export const pool = new Pool({
+  user: process.env.DB_USER ,
+  host: process.env.DB_HOST ,
+  database: process.env.DB_NAME ,
+  password: process.env.DB_PASSWORD ,
+  port: parseInt(process.env.DB_PORT)
+
+
 
 export async function testConnection() {
   try {
@@ -42,3 +42,5 @@ export async function testConnection() {
     console.error("Database connection failed:", err.message);
   }
 }
+
+
