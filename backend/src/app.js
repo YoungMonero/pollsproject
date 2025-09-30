@@ -9,6 +9,11 @@ import authRouter from './routes/auth.js';
 import errorHandler from './middleware/errorHandler.js';
 import { createTablesAndIndexes } from './db/init_db.js';
 import { testConnection } from './db/index.js';
+import pollRouter from "./routes/poll.js";
+import participantRoutes from './routes/participant.js';
+import responseRoutes from './routes/responseRoutes.js';
+import voteRoutes from './routes/voteRoutes.js';
+import hostRouter from './routes/host.js';
 
 dotenv.config();
 
@@ -28,9 +33,19 @@ app.use(cors({
   credentials: true,
 }));
 
+app.use('/api/host', hostRouter);
+
+app.use("/api/polls", pollRouter);
+
+app.use('/api/participants', participantRoutes);
+
+app.use('/api/responses', responseRoutes);
 
 app.use('/', indexRouter);
 app.use('/api/auth', authRouter);
+
+app.use('/api/votes', voteRoutes);
+
 
 // 404 handler
 app.use((req, res) => res.status(404).json({ error: 'Not Found' }));
