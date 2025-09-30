@@ -26,6 +26,7 @@ const Participant = () => {
   };
 
   return (
+
     <div className={styles.body}>
       <motion.div
         className={styles.participant}

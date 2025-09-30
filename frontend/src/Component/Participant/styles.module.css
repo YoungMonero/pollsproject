@@ -13,23 +13,19 @@
 
   font-size: 1.6rem;
 }
-
 .participant {
   color: var(--card-foreground);
   /* text-align: center; */
 }
 
-
 .participant h2 {
   font-size: 3rem;
 }
-
 .participant p {
   font-size: 1.3rem;
   padding: 30px 30px;
   color: var(--card-foreground);
 }
-
 .handleinput {
   display: flex;
   padding: 10px;
@@ -46,18 +42,15 @@
   color: var(--foreground);
   outline: none;
 }
-
 .handleinput span {
   color: var(--primary);
   font-weight: 800;
 }
-
 .handleinput form {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-
 .handleinput button {
   border: none;
   color: var(--primary-foreground);
@@ -78,3 +71,111 @@
   gap: 1rem;
   color: var(--foreground);
 }
+
+}
+.handleinput button:hover {
+  background-color: var(--primary-hover);
+}
+.handleinput label {
+  margin: 8px;
+  display: flex;
+  gap: 1rem;
+  color: var(--foreground);
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+  .body {
+    font-size: 0.9rem;
+    padding: 15px;
+    min-height: 30vh;
+  }
+  
+  .participant p {
+    font-size: 0.9rem;
+    padding: 15px 0;
+  }
+  
+  .handleinput {
+    padding: 6px;
+  }
+  
+  .handleinput input {
+    font-size: 0.9rem;
+    padding: 8px 6px;
+  }
+  
+  .handleinput button {
+    padding: 8px 10px;
+    min-width: 40px;
+    min-height: 40px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .body {
+    font-size: 0.8rem;
+    padding: 10px;
+    align-items: flex-start;
+    padding-top: 40px;
+    min-height: 30vh;
+  }
+  
+  .participant {
+    max-width: 80%;
+    
+  }
+  
+  .participant p {
+    font-size: 0.85rem;
+    padding: 12px 0;
+  }
+  
+  .handleinput {
+    padding: 5px;
+    border-radius: 30px;
+  }
+  
+  .handleinput input {
+    font-size: 0.85rem;
+    padding: 6px 5px;
+  }
+  
+  .handleinput button {
+    padding: 6px 8px;
+    min-width: 36px;
+    min-height: 36px;
+  }
+  
+  .handleinput label {
+    margin: 4px;
+    gap: 0.3rem;
+  }
+  
+  .handleinput form {
+    gap: 5px;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 320px) {
+  .body {
+    font-size: 0.75rem;
+    min-height: 30vh;
+  }
+  
+  .participant p {
+    font-size: 0.8rem;
+  }
+  
+  .handleinput input {
+    font-size: 0.8rem;
+  }
+  
+  .handleinput form {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+

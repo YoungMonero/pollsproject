@@ -2,3 +2,22 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+
+@media (max-width: 768px){
+    .register {
+    display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .register {
+    display: block;
+    }
+}
+
+@media (max-width: 320px) {
+    .register {
+    display: block;
+    }
+}
