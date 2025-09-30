@@ -1,0 +1,170 @@
+/* Overlay (background + center modal) */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* bg-foreground/60 */
+  backdrop-filter: blur(4px); /* backdrop-blur-sm */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 1rem; /* p-4 */
+}
+
+/* Modal container */
+.modal {
+  background-color: #fff; /* bg-surface */
+  border-radius: 0.75rem; /* rounded-xl */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* shadow-lg */
+  max-width: 28rem; /* max-w-md */
+  width: 100%;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+/* Modal header */
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem; /* p-6 */
+  border-bottom: 1px solid #e5e7eb; /* border-border */
+}
+
+.modalTitle {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 600; /* font-semibold */
+  color: #111827; /* text-foreground */
+}
+
+/* Close button */
+.closeButton {
+  padding: 0.5rem; /* p-2 */
+  border-radius: 0.5rem; /* rounded-lg */
+  transition: background-color 0.2s;
+}
+.closeButton:hover {
+  background-color: #f5f5f5; /* hover:bg-muted */
+}
+.closeButton:disabled {
+  opacity: 0.5;
+}
+
+.closeIcon {
+  width: 1.25rem; /* w-5 */
+  height: 1.25rem; /* h-5 */
+  color: #6b7280; /* text-muted-foreground */
+}
+
+/* Form */
+.form {
+  padding: 1.5rem; /* p-6 */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* space-y-6 */
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* space-y-3 */
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500;
+  color: #111827;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem; /* py-3 px-4 */
+  background-color: #fff; /* bg-surface */
+  border: 1px solid #e5e7eb; /* border-border */
+  border-radius: 0.5rem; /* rounded-lg */
+  color: #111827; /* text-foreground */
+  transition: all 0.2s;
+}
+.input::placeholder {
+  color: #9ca3af; /* placeholder:text-muted-foreground */
+}
+.input:focus {
+  outline: none;
+  border-color: transparent;
+  box-shadow: 0 0 0 2px #3b82f6; /* focus:ring-primary */
+}
+
+.inputError {
+  border-color: #ef4444; /* border-destructive */
+}
+.inputError:focus {
+  box-shadow: 0 0 0 2px #ef4444; /* focus:ring-destructive */
+}
+
+.errorMessage {
+  font-size: 0.875rem;
+  color: #ef4444;
+}
+
+/* Actions (buttons row) */
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding-top: 1rem; /* pt-4 */
+}
+
+.cancelButton {
+  padding: 0.75rem 1.5rem; /* py-3 px-6 */
+  color: #6b7280; /* text-muted-foreground */
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.cancelButton:hover {
+  color: #111827; /* hover:text-foreground */
+  background-color: #f5f5f5; /* hover:bg-muted */
+}
+.cancelButton:disabled {
+  opacity: 0.5;
+}
+
+/* Create button */
+.createButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #3b82f6; /* bg-primary */
+  color: #fff; /* text-primary-foreground */
+  font-weight: 500;
+  padding: 0.75rem 1.5rem; /* py-3 px-6 */
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* shadow-sm */
+}
+.createButton:hover {
+  background-color: #2563eb; /* hover:bg-primary-hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* hover:shadow-md */
+}
+.createButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Loading spinner */
+.loadingIcon {
+  width: 1rem; /* w-4 */
+  height: 1rem; /* h-4 */
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
