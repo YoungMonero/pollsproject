@@ -40,7 +40,6 @@ const Participant = () => {
         <motion.div className={styles.handleinput} variants={inputVariants} custom={2}>
           <form onSubmit={handleSubmit}>
             <label>
-              <span>#</span>
               <motion.input
                 type="text"
                 placeholder="Enter slido code"

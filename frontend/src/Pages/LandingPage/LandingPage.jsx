@@ -279,7 +279,7 @@ const LandingPage = () => {
             </p>
           </div>
           <div className={styles.footerBottom}>
-            <p>&copy; 2024 Poll Hub. All rights reserved.</p>
+            <p>&copy; 2025 Poll Hub. All rights reserved.</p>
           </div>
         </div>
       </footer>

@@ -1,0 +1,170 @@
+/* Overlay (background + center modal) */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* foreground/60 */
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 1rem;
+}
+
+/* Modal container */
+.modal {
+  background-color: var(--surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  max-width: 28rem;
+  width: 100%;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+/* Modal header */
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.modalTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+/* Close button */
+.closeButton {
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  transition: background-color 0.2s;
+}
+.closeButton:hover {
+  background-color: var(--muted);
+}
+.closeButton:disabled {
+  opacity: 0.5;
+}
+
+.closeIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--muted-foreground);
+}
+
+/* Form */
+.form {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--surface);
+  border: 1px solid var(--input);
+  border-radius: var(--radius);
+  color: var(--foreground);
+  transition: all 0.2s;
+}
+.input::placeholder {
+  color: var(--muted-foreground);
+}
+.input:focus {
+  outline: none;
+  border-color: transparent;
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+.inputError {
+  border-color: var(--destructive);
+}
+.inputError:focus {
+  box-shadow: 0 0 0 2px var(--destructive);
+}
+
+.errorMessage {
+  font-size: 0.875rem;
+  color: var(--destructive);
+}
+
+/* Actions (buttons row) */
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding-top: 1rem;
+}
+
+.cancelButton {
+  padding: 0.75rem 1.5rem;
+  color: var(--muted-foreground);
+  border-radius: var(--radius);
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.cancelButton:hover {
+  color: var(--foreground);
+  background-color: var(--muted);
+}
+.cancelButton:disabled {
+  opacity: 0.5;
+}
+
+/* Create button */
+.createButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  transition: all 0.2s;
+  box-shadow: var(--shadow-sm);
+}
+.createButton:hover {
+  background-color: var(--primary-hover);
+  box-shadow: var(--shadow-md);
+}
+.createButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Loading spinner */
+.loadingIcon {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

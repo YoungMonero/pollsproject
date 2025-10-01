@@ -19,12 +19,14 @@
 }
 
 .participant h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  color: #fff;
 }
 .participant p {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   padding: 30px 30px;
   color: var(--card-foreground);
+  color: #fff;
 }
 .handleinput {
   display: flex;
@@ -65,17 +67,6 @@
   background-color: var(--primary-hover);
 }
 
-.handleinput label {
-  margin: 8px;
-  display: flex;
-  gap: 1rem;
-  color: var(--foreground);
-}
-
-
-.handleinput button:hover {
-  background-color: var(--primary-hover);
-}
 .handleinput label {
   margin: 8px;
   display: flex;

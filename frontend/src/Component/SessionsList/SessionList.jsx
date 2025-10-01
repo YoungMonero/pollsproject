@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Calendar, Users, MoreHorizontal } from "lucide-react";
+import { Calendar, Users, X } from "lucide-react";
 import styles from "./SessionsList.module.css";
 
 export default function SessionsList({ 
@@ -78,7 +78,8 @@ export default function SessionsList({
                 <div className={styles.sessionDetails}>
                   <h3 className={styles.sessionTitle}>{session.title}</h3>
                   <div className={styles.sessionMeta}>
-                    <span className={styles.sessionCode}>#{session.code}</span>
+                    <span className={styles.sessionCode}
+                    >{session.code}</span>
                     <span className={styles.sessionDate}>
                       <Calendar className={styles.dateIcon} />
                       {formatDate(session.createdAt)}
@@ -95,17 +96,12 @@ export default function SessionsList({
                 </div>
 
                 <div className={styles.actionsCell}>
-                  <button 
-                    className={styles.actionsButton}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      // Handle actions menu
-                    }}
-                  >
-                    <MoreHorizontal className={styles.actionsIcon} />
+                  <button >
+                    <X className={styles.actionsIcon} />
                   </button>
                 </div>
               </motion.div>
+              
             ))
           )}
         </div>

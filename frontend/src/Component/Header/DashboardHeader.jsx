@@ -9,7 +9,7 @@ export default function DashboardHeader({
   onSearchChange, 
   onCreateSession 
 }) {
-  return (
+  return ( 
     <motion.header 
       className={styles.header}
       initial={{ y: -20, opacity: 0 }}

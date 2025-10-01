@@ -42,9 +42,19 @@ export const createTablesAndIndexes = async () => {
         CREATE TABLE IF NOT EXISTS poll_options (
             id SERIAL PRIMARY KEY,
             poll_id INTEGER NOT NULL REFERENCES polls(id) ON DELETE CASCADE,
-            text TEXT NOT NULL,
-            "order" INTEGER DEFAULT 0
+            label TEXT NOT NULL,
+            position INTEGER NOT NULL DEFAULT 0
         );
+     `);
+
+         await client.query(`
+                CREATE TABLE  IF NOT EXISTS votes (
+                id SERIAL PRIMARY KEY,
+                poll_id INTEGER NOT NULL,
+                option_id INTEGER NOT NULL,
+                participant_id INTEGER NOT NULL,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            );
      `);
 
     await client.query(`
